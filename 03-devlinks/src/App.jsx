@@ -1,5 +1,6 @@
 import "./App.css";
-import foto from "./img/WhatsApp Image 2025-01-29 at 07.39.53.jpeg";
+import fotolight from "./img/WhatsApp Image 2025-01-29 at 07.39.53.jpeg";
+import fotodark from "./img/images.png"
 
 import Perfil from "./components/perfil/perfil";
 import Switch from "./components/switch/Switch";
@@ -19,16 +20,18 @@ const troca = () => {
   return (
     <>
       <div id="App" className={isLight ? "light" : ""}>
-        <Perfil fotoPerfil={foto}>@NewLivia</Perfil>
+        <Perfil fotoPerfil={isLight ? fotolight : fotodark}>@NewLivia</Perfil>
 
         <Switch troca={troca} isLight={isLight} />
-
+        <div id="container">
         <ul>
           <Links link={"https://github.com/L1vias"}> GitHub</Links>
           <Links link={"https://instagram.com/"}>Instagram</Links>
           <Links link={"https://github.com/L1vias"}>Portifólio</Links>
           <Links link={"https://github.com/L1vias"}>Projetos</Links>
+        
         </ul>
+</div>
         <div id="socialLinks">
           <SocialLinks  
           link={"https://github.com/L1vias"}

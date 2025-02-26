@@ -13,9 +13,19 @@ li a {
 
   text-decoration: none;
   font-weight: bold;
+
+  margin: 20px auto;
+ 
+  
 }
 /*pseudo-selector */
 li a:hover {
   background: var(--surface-color-hover);
   border: 1px solid var(--text-color);
 }
+
+ul, ol {
+  list-style: none;
+}
+
+
