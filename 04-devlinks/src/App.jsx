@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Footer from "./component/footer/Footer";
 import MovieCard from "./component/movieCard/MovieCard";
+import Logo from "./assets/devflix.png"
+import Lupa from "./assets/search.svg"
 //import logo from "https://placehold.co/200x200";
 
 const App = () => {
@@ -34,7 +36,7 @@ const App = () => {
 
   return (
     <div id="app">
-      <img className="logo" src={"https://placehold.co/200x200"} alt="" />
+      <img className="logo" src={Logo} alt="" />
 
       <div className="search">
         <input
@@ -45,7 +47,7 @@ const App = () => {
         />
         <img
           onClick={() => searchMovies(search)}
-          src={"https://placehold.co/20x20"}
+          src={Lupa}
           alt=""
         />
       </div>
@@ -53,11 +55,11 @@ const App = () => {
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie, index) => (
-            <MovieCard key={index} {...movie} />
+            <MovieCard key={index} apiUrl={apiUrl} {...movie} />
           ))}
         </div>
       ) : (
-        <h2 className="empty">😢 Filme não encontrado😢</h2>
+        <h2 className="empty">😢 Filme não encontrado 😢</h2>
       )}
 
       <Footer devName={"Livia"} devLink={"https://github.com/L1vias"} />
