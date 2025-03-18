@@ -24,7 +24,7 @@ const App = () => {
     const response = await fetch(`${apiUrl}&s=${title}}`);
     const data = await response.json();
 
-    //alimentand o movies
+    //alimentando o movies
     setMovies(data.Search);
   };
 
