@@ -2,7 +2,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="w-100 navbar navbar-dark bg-dark justify-content-around align-items-center">
+    <header className="custom-header w-100 navbar navbar-dark justify-content-around align-items-center">
+
       <div id="info" className="d-flex gap-5 w-50 justify-content-between">
         <div id="logo" role="button" className="d-flex align-items-center">
           <i className="bi bi-controller fs-1 text-light me-3"></i>
