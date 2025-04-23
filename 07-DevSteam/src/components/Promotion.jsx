@@ -55,7 +55,7 @@ const Promotion = (props) => {
 
   return (
     <div id="promotion" className="container w-75 my-5">
-      <h2 className="text-uppercase">Promoções</h2>
+      <h2 className="text-uppercase text-center text-md-start ms-5 ps-md-3 mb-4 text-light">Promoções</h2>
 <div
   id="itensPromo"
   className="d-flex flex-wrap gap-4 justify-content-between"
@@ -72,7 +72,8 @@ const Promotion = (props) => {
         preco={jogo.preco.toFixed(2)}
         desconto={jogo.desconto}
         imagem={jogo.imagem}
-        onAddCarrinho={props.onAddCarrinho} 
+        //adicionandi a opção de click com os itens de jogo no carrinho
+        onAddCarrinho={() => props.onAddCarrinho(jogo)} //claback para adicionae somente um item e não todos os itens do array
 
           />
         ))}

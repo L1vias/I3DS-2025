@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = (props) => {
   return (
-    <header className="pt-4 w-100 navbar navbar-dark bg-dark justify-content-around align-items-center">
+    <header className="custom-header pt-4 w-100 navbar navbar-dark justify-content-around align-items-center">
       <div id="info" className="d-flex gap-5 w-50 justify-content-between">
         <div id="logo" role="button" className="d-flex align-items-center me-5">
           <i className="bi bi-controller fs-1 text-light me-3"></i>
@@ -19,6 +19,7 @@ const Header = (props) => {
       <div
         id="carrinho"
         role="button"
+        data-bs-toggle="offcanvas" data-bs-target="#carrinhoOffCanvas"
         className="position-relative d-flex align-items-center gap-3"
       >
         <i className="bi bi-cart4 text-light fs-2"></i>
