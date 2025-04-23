@@ -1,7 +1,7 @@
 import React from "react";
 import PromoCard from "./PromoCard";
 
-const Promotion = () => {
+const Promotion = (props) => {
   const games = [
     {
       id: 1,
@@ -36,7 +36,7 @@ const Promotion = () => {
         "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg",
     },
     {
-        id: 4,
+        id: 5,
         titulo: "Red Dead Redemption 2",
         preco: 199.9,
         desconto: 40, // 40% off
@@ -44,7 +44,7 @@ const Promotion = () => {
           "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg",
       },
       {
-        id: 4,
+        id: 6,
         titulo: "Red Dead Redemption 2",
         preco: 199.9,
         desconto: 40, // 40% off
@@ -72,6 +72,7 @@ const Promotion = () => {
         preco={jogo.preco.toFixed(2)}
         desconto={jogo.desconto}
         imagem={jogo.imagem}
+        onAddCarrinho={props.onAddCarrinho} 
 
           />
         ))}
